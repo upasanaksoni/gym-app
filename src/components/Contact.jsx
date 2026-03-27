@@ -12,7 +12,7 @@ const Contact = () => {
       e.preventDefault();
       setLoading(true);
       try{
-        const{date}= await axios.post(" http://localhost:4000/send/mail" ,{
+        const{date}= await axios.post(" https://gym-app-3-ish2.onrender.com/send/mail" ,{
           name,email,message
         },{withCredentials:true ,headers :{"Content-Type":"application/json"},
       }
@@ -34,7 +34,7 @@ const Contact = () => {
        setLoading(true);
        
        try {
-         const response = await fetch("http://localhost:4000/send/mail", {
+         const response = await fetch("https://gym-app-3-ish2.onrender.com/send/mail", {
            method: "POST",
            headers: {
              "Content-Type": "application/json",
